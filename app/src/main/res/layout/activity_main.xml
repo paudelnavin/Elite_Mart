@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="101dp"
@@ -67,12 +67,13 @@
         android:layout_marginEnd="98dp"
         android:layout_marginRight="98dp"
         android:layout_marginBottom="152dp"
+        android:onClick="addButton"
         android:text="ADD FOOD"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -80,8 +81,8 @@
         android:layout_width="419dp"
         android:layout_height="59dp"
         android:layout_marginBottom="-5dp"
-        android:text="DECIDE!"
         android:onClick="decideClicked"
+        android:text="DECIDE!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
