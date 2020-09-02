@@ -10,7 +10,6 @@ import kotlin.random.Random
 class MainActivity : AppCompatActivity() {
     var menu : ArrayList<String> = ArrayList<String>(5)
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,4 +27,5 @@ class MainActivity : AppCompatActivity() {
         if(!menu.contains(newFood)) menu.add(newFood)
         textView.text = newFood
     }
+
 }
