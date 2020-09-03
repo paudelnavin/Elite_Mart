@@ -160,7 +160,7 @@
 
             <Button
                 android:id="@+id/outlinedButton"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
                 android:layout_width="370dp"
                 android:layout_height="wrap_content"
                 android:text="@string/create_a_new_account"
