@@ -2,4 +2,8 @@
     <string name="app_name">Assignment 3.1</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="email_address">Email Address (Required)</string>
+    <string name="password_required">Password (Required)</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_a_new_account">Create a new account</string>
 </resources>
