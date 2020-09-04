@@ -2,6 +2,7 @@ package com.example.assignment31
 
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.Gravity
@@ -11,6 +12,9 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import com.example.assignment31.domains.User
+import com.example.assignment31.repository.Datasource
+import com.example.assignment31.repository.ListDatasource
 import kotlinx.android.synthetic.main.activity_fullscreen.*
 
 /**
@@ -34,13 +38,27 @@ class FullscreenActivity : AppCompatActivity() {
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
         setContentView(R.layout.activity_fullscreen)
         supportActionBar?.hide()
+
+        ListDatasource.save(User("Brook", "Yemerou", "BYemerou", "brookyemerou"))
+        ListDatasource.save(User("Brook", "Yemerou", "B", "Y"))
+        ListDatasource.save(User("Jane", "Doe", "JDoe", "janedoe"))
+        ListDatasource.save(User("Peter", "Parker", "PParker", "peterparker"))
+        ListDatasource.save(User("John", "Doe", "JDoeM", "jdoem"))
+
     }
 
+    fun authentication(view: View) {
+        val email = email.text.toString()
+        val password = password.text.toString()
 
+        if(ListDatasource.find(email)?.password == password) {
+            val intent = Intent(this, ShoppingActivity::class.java)
+            intent.putExtra("username", email)
+            startActivity(intent)
+        }
+    }
 
 
 
@@ -69,4 +87,6 @@ class FullscreenActivity : AppCompatActivity() {
         myToast.setGravity(Gravity.LEFT,200,560)
         myToast.show()
     }
+
+
 }
