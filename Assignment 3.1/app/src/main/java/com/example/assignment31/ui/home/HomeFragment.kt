@@ -1,14 +1,17 @@
 package com.example.assignment31.ui.home
 
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.assignment31.R
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
@@ -26,4 +29,14 @@ class HomeFragment : Fragment() {
         })
         return root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+//        electronics.setOnClickListener { view ->
+//            val myToast = Toast.makeText(requireContext(),"Electronics", Toast.LENGTH_SHORT)
+//            myToast.setGravity(Gravity.LEFT,200,560)
+//            myToast.show()
+//        }
+    }
+
 }

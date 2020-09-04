@@ -17,4 +17,7 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="sign_in_to_your_account">Sign in to your account</string>
+    <string name="clothings">Clothings</string>
+    <string name="beauty">Beauty</string>
+    <string name="food">Food</string>
 </resources>
