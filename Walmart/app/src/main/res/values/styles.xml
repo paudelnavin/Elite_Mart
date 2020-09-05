@@ -28,4 +28,7 @@
 
     <style name="AppTheme.PopupOverlay" parent="Theme.MaterialComponents" />
 
+    <style name="AppTheme.RoundedCornerMaterialButton" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="android:background">@drawable/rounded_button</item>
+    </style>
 </resources>

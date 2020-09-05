@@ -91,4 +91,11 @@ class FullscreenActivity : AppCompatActivity() {
     }
 
 
+
+    fun createAccount(view: View) {
+        val intent = Intent(this, RegisterActivity::class.java)
+        startActivity(intent)
+    }
+
+
 }

@@ -20,4 +20,6 @@
     <string name="clothings">Clothings</string>
     <string name="beauty">Beauty</string>
     <string name="food">Food</string>
+    <string name="create_account">Create Account</string>
+    <string name="create_your_account">Create your account</string>
 </resources>
