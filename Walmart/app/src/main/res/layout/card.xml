@@ -18,7 +18,6 @@
         android:background="#FFFFFF"
         android:checkable="true"
         android:clickable="true"
-        android:focusable="auto"
         android:padding="10dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="10dp"
@@ -32,15 +31,15 @@
             android:gravity="center_horizontal|center_vertical"
             android:orientation="vertical">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imageButton5"
                 style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+                app:srcCompat="@drawable/clothing"
                 android:layout_width="match_parent"
                 android:layout_height="183dp"
-                android:adjustViewBounds="false"
                 android:background="#FFFFFF"
                 android:clickable="false"
-                android:cropToPadding="false"
+                android:focusable="false"
                 android:scaleType="fitCenter"
                 android:src="@drawable/electronics" />
 

@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.assignment31.R
+import com.example.assignment31.adapters.CategoryAdapter
 import com.example.assignment31.domains.ShoppingCategory
 import kotlinx.android.synthetic.main.fragment_home.*
 

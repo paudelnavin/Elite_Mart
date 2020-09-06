@@ -1,6 +1,8 @@
-package com.example.assignment31.ui.home
+package com.example.assignment31.adapters
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.Toast
 import com.example.assignment31.R
+import com.example.assignment31.RecycledListActivity
 import com.example.assignment31.domains.ShoppingCategory
 import kotlinx.android.synthetic.main.card.view.*
 
@@ -26,8 +29,16 @@ class CategoryAdapter : BaseAdapter {
 
         var categoryView = inflator.inflate(R.layout.card, p2, false)
         categoryView.imageButton5.setImageResource(cat.imageString!!)
-        categoryView.imageButton5.setOnClickListener{
-            var toast: Toast = Toast.makeText(context, "${categoryView.textView8.text} Category Selected", Toast.LENGTH_LONG )
+        categoryView.beauty.setOnClickListener{
+            if(categoryView.textView8.text == "Electronics") {
+                val intent = Intent(context, RecycledListActivity::class.java)
+                (context as Activity).startActivity(intent)
+            }
+            var toast: Toast = Toast.makeText(
+                context,
+                "${categoryView.textView8.text} Category Selected",
+                Toast.LENGTH_LONG
+            )
             toast.setGravity(Gravity.BOTTOM, 0, 0)
             toast.show()
         }
