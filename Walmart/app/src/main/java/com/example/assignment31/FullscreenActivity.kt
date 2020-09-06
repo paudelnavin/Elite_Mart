@@ -3,6 +3,7 @@ package com.example.assignment31
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.view.Gravity
@@ -16,6 +17,7 @@ import com.example.assignment31.domains.User
 import com.example.assignment31.repository.Datasource
 import com.example.assignment31.repository.ListDatasource
 import kotlinx.android.synthetic.main.activity_fullscreen.*
+import java.util.*
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -41,8 +43,8 @@ class FullscreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_fullscreen)
         supportActionBar?.hide()
 
-        ListDatasource.save(User("Brook", "Yemerou", "BYemerou", "brookyemerou"))
-        ListDatasource.save(User("Brook", "Yemerou", "B", "Y"))
+        ListDatasource.save(User("Brook", "Yemerou", "brookyemerou@gmail.com", "brookyemerou"))
+        ListDatasource.save(User("Brook", "Yemerou", "byemerou@miu.edu", "Y"))
         ListDatasource.save(User("Jane", "Doe", "JDoe", "janedoe"))
         ListDatasource.save(User("Peter", "Parker", "PParker", "peterparker"))
         ListDatasource.save(User("John", "Doe", "JDoeM", "jdoem"))
@@ -84,17 +86,30 @@ class FullscreenActivity : AppCompatActivity() {
         private const val UI_ANIMATION_DELAY = 300
     }
 
-    fun forgotPass(view: View) {
-        val myToast = Toast.makeText(applicationContext,"Forgot Password Clicked!",Toast.LENGTH_SHORT)
-        myToast.setGravity(Gravity.LEFT,200,560)
-        myToast.show()
-    }
-
-
-
     fun createAccount(view: View) {
         val intent = Intent(this, RegisterActivity::class.java)
         startActivity(intent)
+    }
+
+    fun forgotPassword(view: View) {
+        val myToast = Toast.makeText(applicationContext,"Forgot Password Clicked!",Toast.LENGTH_SHORT)
+        myToast.setGravity(Gravity.LEFT,200,560)
+        myToast.show()
+
+        if(email.text.toString() != "") {
+            var intent = Intent(Intent.ACTION_SEND)
+            println(email.text.toString())
+            intent.putExtra(Intent.EXTRA_EMAIL, email.text.toString())
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Password Recovery")
+            intent.putExtra(Intent.EXTRA_TEXT, ListDatasource.find(email.text.toString())?.password)
+            intent.type = "message/rfc822"
+            startActivity(Intent.createChooser(intent, "Choose Email Client"))
+        } else {
+            val toast: Toast = Toast.makeText(this, "No Email Found", Toast.LENGTH_SHORT)
+            toast.setGravity(Gravity.LEFT, 200, 560)
+            toast.show()
+        }
+
     }
 
 
