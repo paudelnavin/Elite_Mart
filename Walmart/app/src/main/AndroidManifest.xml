@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RecycledList"></activity>
+        <activity
+            android:name=".Electronics"
+            android:label="@string/title_activity_electronics"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".RegisterActivity" />
         <activity
             android:name=".ShoppingActivity"
             android:label="@string/title_activity_shopping"
