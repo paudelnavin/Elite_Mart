@@ -1,3 +1,5 @@
-![Test Image 4](https://github.com/Brook4846/CS473/blob/master/Walmart/app/src/main/res/drawable/screenshot.jpg)
-![Test Image 4](https://github.com/Brook4846/CS473/blob/master/Walmart/app/src/main/res/drawable/screenshot1.jpg)
-![Test Image 4](https://github.com/Brook4846/CS473/blob/master/Walmart/app/src/main/res/drawable/screenshot2.jpg)
+![Test Image 1](https://github.com/Brook4846/CS473/blob/master/Walmart/app/src/main/res/drawable/screenshot.jpg)
+![Test Image 2](https://github.com/Brook4846/CS473/blob/master/Walmart/app/src/main/res/drawable/screenshot1.jpg)
+![Test Image 3](https://github.com/Brook4846/CS473/blob/master/Walmart/app/src/main/res/drawable/screenshot2.jpg)
+![Test Image 4](https://github.com/Brook4846/CS473/blob/master/Walmart/app/src/main/res/drawable/screenshot3.jpg)
+![Test Image 5](https://github.com/Brook4846/CS473/blob/master/Walmart/app/src/main/res/drawable/screenshot4.jpg)
