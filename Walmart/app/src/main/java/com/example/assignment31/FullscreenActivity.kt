@@ -3,21 +3,18 @@ package com.example.assignment31
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.view.Gravity
-import android.view.MotionEvent
 import android.view.View
-import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import com.example.assignment31.domains.Device
 import com.example.assignment31.domains.User
-import com.example.assignment31.repository.Datasource
-import com.example.assignment31.repository.ListDatasource
+import com.example.assignment31.repository.ListDeviceDatasource
+import com.example.assignment31.repository.ListUserDatasource
 import kotlinx.android.synthetic.main.activity_fullscreen.*
-import java.util.*
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -43,23 +40,62 @@ class FullscreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_fullscreen)
         supportActionBar?.hide()
 
-        ListDatasource.save(User("Brook", "Yemerou", "brookyemerou@gmail.com", "brookyemerou"))
-        ListDatasource.save(User("Brook", "Yemerou", "byemerou@miu.edu", "Y"))
-        ListDatasource.save(User("Jane", "Doe", "JDoe", "janedoe"))
-        ListDatasource.save(User("Peter", "Parker", "PParker", "peterparker"))
-        ListDatasource.save(User("John", "Doe", "JDoeM", "jdoem"))
-        ListDatasource.save(User("John", "Doe", "", ""))
+        ListUserDatasource.save(User("Brook", "Yemerou", "brookyemerou@gmail.com", "brookyemerou"))
+        ListUserDatasource.save(User("Brook", "Yemerou", "byemerou@miu.edu", "Y"))
+        ListUserDatasource.save(User("Jane", "Doe", "JDoe", "janedoe"))
+        ListUserDatasource.save(User("Peter", "Parker", "PParker", "peterparker"))
+        ListUserDatasource.save(User("John", "Doe", "JDoeM", "jdoem"))
+        ListUserDatasource.save(User("John", "Doe", "", ""))
 
+        ListDeviceDatasource.save(Device("iPhone 11", 999.0, "Black", R.drawable.phone, "34564", "This pre-owned product is not Apple certified, but has been professionally inspected, tested and " +
+                "cleaned by Amazon-qualified suppliers."))
+        ListDeviceDatasource.save(Device("MacBook Air", 850.0, "Space Grey", R.drawable.macbook, "76435", "Stunning 13.3-inch Retina display with True Tone technology " +
+                "Backlit Magic Keyboard and Touch ID" +
+                "Tenth-generation Intel Core i3 processor" +
+                "Intel Iris Plus Graphics"))
+        ListDeviceDatasource.save(
+            Device("Alienware",
+                    1029.99,
+                "Lunar Light",
+                R.drawable.monitor,
+                "AW3420DW",
+                "Experience breathtaking views with a combination of immersive features\n" +
+                        "A 1900R curved, wide 21: 9 display maximizes the field of view"
+
+        ))
+
+
+        ListDeviceDatasource.save(
+            Device("MSI Leopard 10SFK-062",
+                1399.00,
+                "Black",
+                R.drawable.laptop,
+                "GL65"
+                ,"15.6\" FHD IPS-Level 144Hz 72%NTSC Thin Bezel close to 100%Srgb NVIDIA GeForce RTX 2070 8G GDDR6\n" +
+                        "Intel Core i7-10750H 2.6-5.0GHz"
+            )
+        )
+
+
+        ListDeviceDatasource.save(
+            Device("Omen by HP Obelisk",
+            1999.99,
+            "Black",
+            R.drawable.desktop,
+                "8751023",
+                "Hyper-realistic graphics: NVIDIA(R) GeForce(R) RTX 2080 Super (8 GB GDDR6 dedicated memory). Enjoy new levels of gaming realism and speed"
+                )
+        )
     }
 
     fun authentication(view: View) {
         val email = email.text.toString()
         val password = password.text.toString()
 
-        if(ListDatasource.find(email)?.password == password) {
+        if(ListUserDatasource.find(email)?.password == password) {
             val intent = Intent(this, ShoppingActivity::class.java)
             intent.putExtra("username", email)
-            intent.putExtra("fullname", "${ListDatasource.find(email)?.firstname} ${ListDatasource.find(email)?.lastname}")
+            intent.putExtra("fullname", "${ListUserDatasource.find(email)?.firstname} ${ListUserDatasource.find(email)?.lastname}")
             startActivity(intent)
         }
     }
@@ -101,7 +137,7 @@ class FullscreenActivity : AppCompatActivity() {
             println(email.text.toString())
             intent.putExtra(Intent.EXTRA_EMAIL, email.text.toString())
             intent.putExtra(Intent.EXTRA_SUBJECT, "Password Recovery")
-            intent.putExtra(Intent.EXTRA_TEXT, ListDatasource.find(email.text.toString())?.password)
+            intent.putExtra(Intent.EXTRA_TEXT, ListUserDatasource.find(email.text.toString())?.password)
             intent.type = "message/rfc822"
             startActivity(Intent.createChooser(intent, "Choose Email Client"))
         } else {

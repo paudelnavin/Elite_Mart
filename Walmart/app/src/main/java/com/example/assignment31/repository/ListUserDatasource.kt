@@ -3,7 +3,7 @@ package com.example.assignment31.repository
 import com.example.assignment31.domains.User
 import java.lang.Exception
 
-object ListDatasource : Datasource {
+object ListUserDatasource : UserDatasource {
 
     private var storage: MutableList<User> = mutableListOf()
 

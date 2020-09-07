@@ -11,7 +11,6 @@ import com.example.assignment31.domains.Device
 
 class DeviceAdapter(private var deviceList : ArrayList<Device>) : RecyclerView.Adapter<DeviceAdapter.DeviceHolder>() {
 
-//    private var deviceList = ArrayList<Device>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DeviceAdapter.DeviceHolder {
         val v = LayoutInflater.from(parent?.context).inflate(R.layout.horizontal_card, parent, false)
         return DeviceHolder(v)
@@ -22,6 +21,7 @@ class DeviceAdapter(private var deviceList : ArrayList<Device>) : RecyclerView.A
         holder?.deviceColor?.text = deviceList[position].color
         holder?.devicePrice?.text = deviceList[position].price.toString()
         holder?.deviceImage?.setImageResource(deviceList[position].image)
+        holder?.deviceId?.text = deviceList[position].itemId
     }
 
     override fun getItemCount(): Int {
@@ -29,10 +29,11 @@ class DeviceAdapter(private var deviceList : ArrayList<Device>) : RecyclerView.A
     }
 
     class DeviceHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val deviceName = itemView.findViewById<TextView>(R.id.name)
-        val devicePrice = itemView.findViewById<TextView>(R.id.price)
-        val deviceColor = itemView.findViewById<TextView>(R.id.color)
-        val deviceImage = itemView.findViewById<ImageView>(R.id.profile_image)
-
+        val deviceName = itemView.findViewById<TextView>(R.id.name)!!
+        val devicePrice = itemView.findViewById<TextView>(R.id.price)!!
+        val deviceColor = itemView.findViewById<TextView>(R.id.color)!!
+        val deviceImage = itemView.findViewById<ImageView>(R.id.profile_image)!!
+        val deviceId = itemView.findViewById<TextView>(R.id.itemId)!!
     }
+
 }

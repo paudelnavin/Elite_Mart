@@ -1,10 +1,6 @@
 package com.example.assignment31.domains
 
-class ShoppingCategory {
-    var imageString : Int?= null
-    var catName : String?= null
-    constructor(imageString: Int, catName: String) {
-        this.imageString = imageString
-        this.catName = catName
-    }
+class ShoppingCategory(imageString: Int, catName: String) {
+    var imageString : Int?= imageString
+    var catName : String?= catName
 }

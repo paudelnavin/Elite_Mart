@@ -2,7 +2,7 @@ package com.example.assignment31.repository
 
 import com.example.assignment31.domains.User
 
-interface Datasource {
+interface UserDatasource {
     fun save(user: User) : String?
     fun find(id:String) : User?
     fun edit(user:User) : String

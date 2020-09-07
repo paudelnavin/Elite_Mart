@@ -1,13 +1,19 @@
 package com.example.assignment31
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.assignment31.adapters.DeviceAdapter
 import com.example.assignment31.domains.Device
+import com.example.assignment31.repository.ListDeviceDatasource
 import kotlinx.android.synthetic.main.activity_recycled_list.*
+import kotlinx.android.synthetic.main.card.view.*
+import kotlinx.android.synthetic.main.horizontal_card.view.*
 
 class RecycledListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,38 +22,23 @@ class RecycledListActivity : AppCompatActivity() {
 
         val recyclerView = rview
         recyclerView?.layoutManager = LinearLayoutManager(this)
-        val devices = ArrayList<Device>()
-        devices.add(Device("iPhone 5", 999.0, "Black", R.drawable.phone, "34564", "Brand New"))
-        devices.add(Device("MacBook Air", 850.0, "Grey", R.drawable.macbook, "76435", "Used"))
-        devices.add(Device("iPhone 5", 999.0, "Black", R.drawable.phone, "34564", "Brand New"))
-        devices.add(Device("MacBook Air", 850.0, "Grey", R.drawable.macbook, "76435", "Used"))
-        devices.add(Device("iPhone 5", 999.0, "Black", R.drawable.phone, "34564", "Brand New"))
-        devices.add(Device("MacBook Air", 850.0, "Grey", R.drawable.macbook, "76435", "Used"))
-        devices.add(Device("iPhone 5", 999.0, "Black", R.drawable.phone, "34564", "Brand New"))
-        devices.add(Device("MacBook Air", 850.0, "Grey", R.drawable.macbook, "76435", "Used"))
-        devices.add(Device("iPhone 5", 999.0, "Black", R.drawable.phone, "34564", "Brand New"))
-        devices.add(Device("MacBook Air", 850.0, "Grey", R.drawable.macbook, "76435", "Used"))
-        devices.add(Device("iPhone 5", 999.0, "Black", R.drawable.phone, "34564", "Brand New"))
-        devices.add(Device("MacBook Air", 850.0, "Grey", R.drawable.macbook, "76435", "Used"))
-        devices.add(Device("iPhone 5", 999.0, "Black", R.drawable.phone, "34564", "Brand New"))
-        devices.add(Device("MacBook Air", 850.0, "Grey", R.drawable.macbook, "76435", "Used"))
-        devices.add(Device("iPhone 5", 999.0, "Black", R.drawable.phone, "34564", "Brand New"))
-        devices.add(Device("MacBook Air", 850.0, "Grey", R.drawable.macbook, "76435", "Used"))
-        devices.add(Device("iPhone 5", 999.0, "Black", R.drawable.phone, "34564", "Brand New"))
-        devices.add(Device("MacBook Air", 850.0, "Grey", R.drawable.macbook, "76435", "Used"))
-        devices.add(Device("iPhone 5", 999.0, "Black", R.drawable.phone, "34564", "Brand New"))
-        devices.add(Device("MacBook Air", 850.0, "Grey", R.drawable.macbook, "76435", "Used"))
-        devices.add(Device("iPhone 5", 999.0, "Black", R.drawable.phone, "34564", "Brand New"))
-        devices.add(Device("MacBook Air", 850.0, "Grey", R.drawable.macbook, "76435", "Used"))
-        devices.add(Device("iPhone 5", 999.0, "Black", R.drawable.phone, "34564", "Brand New"))
-        devices.add(Device("MacBook Air", 850.0, "Grey", R.drawable.macbook, "76435", "Used"))
+//        val devices = ArrayList<Device>()
 
-        var adapter = DeviceAdapter(devices)
+        var adapter = DeviceAdapter(ListDeviceDatasource.findAll())
         recyclerView.adapter = adapter
 
     }
 
     fun deviceDescription(view: View) {
-
+        val toast: Toast = Toast.makeText(
+            this,
+            "Category Selected",
+            Toast.LENGTH_LONG
+        )
+        toast.setGravity(Gravity.BOTTOM, 0, 0)
+        toast.show()
+        val intent = Intent(this, DeviceDescriptionActivity::class.java)
+        intent.putExtra("deviceId", view.itemId.text)
+        startActivity(intent)
     }
 }
