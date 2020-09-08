@@ -62,7 +62,6 @@ class QuestionAdapter (var questions : ArrayList<Question>): RecyclerView.Adapte
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                     setMessage("You submitted at ${LocalDateTime.now()}, You achieved ${result}%!")
                 }
-                setPositiveButton("OK", DialogInterface.OnClickListener())
                 show()
             }
         }
