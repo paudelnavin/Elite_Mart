@@ -1,4 +1,4 @@
-package com.example.assignment31.adapters
+package com.example.emart.adapters
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -10,9 +10,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.Toast
-import com.example.assignment31.R
-import com.example.assignment31.RecycledListActivity
-import com.example.assignment31.domains.ShoppingCategory
+import com.example.emart.R
+import com.example.emart.RecycledListActivity
+import com.example.emart.domains.ShoppingCategory
 import kotlinx.android.synthetic.main.card.view.*
 
 class CategoryAdapter : BaseAdapter {

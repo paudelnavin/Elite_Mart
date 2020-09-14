@@ -1,12 +1,10 @@
-package com.example.assignment31
+package com.example.emart
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import com.example.assignment31.domains.Device
-import com.example.assignment31.repository.ListDeviceDatasource
+import com.example.emart.domains.Device
+import com.example.emart.repository.ListDeviceDatasource
 import kotlinx.android.synthetic.main.activity_device_description.*
 import kotlinx.android.synthetic.main.description.view.*
 

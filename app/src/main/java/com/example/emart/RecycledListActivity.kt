@@ -1,18 +1,15 @@
-package com.example.assignment31
+package com.example.emart
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.assignment31.adapters.DeviceAdapter
-import com.example.assignment31.domains.Device
-import com.example.assignment31.repository.ListDeviceDatasource
+import com.example.emart.adapters.DeviceAdapter
+import com.example.emart.repository.ListDeviceDatasource
 import kotlinx.android.synthetic.main.activity_recycled_list.*
-import kotlinx.android.synthetic.main.card.view.*
 import kotlinx.android.synthetic.main.horizontal_card.view.*
 
 class RecycledListActivity : AppCompatActivity() {

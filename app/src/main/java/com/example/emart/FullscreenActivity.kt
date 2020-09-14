@@ -1,4 +1,4 @@
-package com.example.assignment31
+package com.example.emart
 
 import androidx.appcompat.app.AppCompatActivity
 import android.annotation.SuppressLint
@@ -10,10 +10,10 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-import com.example.assignment31.domains.Device
-import com.example.assignment31.domains.User
-import com.example.assignment31.repository.ListDeviceDatasource
-import com.example.assignment31.repository.ListUserDatasource
+import com.example.emart.domains.Device
+import com.example.emart.domains.User
+import com.example.emart.repository.ListDeviceDatasource
+import com.example.emart.repository.ListUserDatasource
 import kotlinx.android.synthetic.main.activity_fullscreen.*
 
 /**
@@ -61,7 +61,6 @@ class FullscreenActivity : AppCompatActivity() {
                 "AW3420DW",
                 "Experience breathtaking views with a combination of immersive features\n" +
                         "A 1900R curved, wide 21: 9 display maximizes the field of view"
-
         ))
 
 

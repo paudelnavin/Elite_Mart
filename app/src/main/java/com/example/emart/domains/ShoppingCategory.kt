@@ -1,4 +1,4 @@
-package com.example.assignment31.domains
+package com.example.emart.domains
 
 class ShoppingCategory(imageString: Int, catName: String) {
     var imageString : Int?= imageString

@@ -1,4 +1,4 @@
-package com.example.assignment31.adapters
+package com.example.emart.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.assignment31.R
-import com.example.assignment31.domains.Device
+import com.example.emart.R
+import com.example.emart.domains.Device
 
 class DeviceAdapter(private var deviceList : ArrayList<Device>) : RecyclerView.Adapter<DeviceAdapter.DeviceHolder>() {
 

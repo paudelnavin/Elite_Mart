@@ -1,4 +1,4 @@
-package com.example.assignment31.ui.home
+package com.example.emart.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.example.assignment31.R
-import com.example.assignment31.adapters.CategoryAdapter
-import com.example.assignment31.domains.ShoppingCategory
+import com.example.emart.R
+import com.example.emart.adapters.CategoryAdapter
+import com.example.emart.domains.ShoppingCategory
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {

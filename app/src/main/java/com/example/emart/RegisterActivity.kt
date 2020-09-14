@@ -1,11 +1,11 @@
-package com.example.assignment31
+package com.example.emart
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.example.assignment31.domains.User
-import com.example.assignment31.repository.ListUserDatasource
+import com.example.emart.domains.User
+import com.example.emart.repository.ListUserDatasource
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : AppCompatActivity() {

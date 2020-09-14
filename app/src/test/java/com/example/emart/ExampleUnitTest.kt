@@ -1,7 +1,7 @@
-package com.example.assignment31
+package com.example.emart
 
-import com.example.assignment31.domains.User
-import com.example.assignment31.repository.ListUserDatasource
+import com.example.emart.domains.User
+import com.example.emart.repository.ListUserDatasource
 import org.junit.Test
 
 import org.junit.Assert.*

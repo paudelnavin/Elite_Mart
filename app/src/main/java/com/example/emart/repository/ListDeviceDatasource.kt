@@ -1,7 +1,6 @@
-package com.example.assignment31.repository
+package com.example.emart.repository
 
-import com.example.assignment31.domains.Device
-import com.example.assignment31.domains.User
+import com.example.emart.domains.Device
 import java.lang.Exception
 
 object ListDeviceDatasource : DeviceDatasource {

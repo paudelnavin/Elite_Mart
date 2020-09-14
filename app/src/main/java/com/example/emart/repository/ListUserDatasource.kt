@@ -1,6 +1,6 @@
-package com.example.assignment31.repository
+package com.example.emart.repository
 
-import com.example.assignment31.domains.User
+import com.example.emart.domains.User
 import java.lang.Exception
 
 object ListUserDatasource : UserDatasource {
