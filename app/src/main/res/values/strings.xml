@@ -33,4 +33,10 @@
     <string name="color">Color</string>
     <string name="price">Price</string>
     <string name="devicename">Name</string>
+
+    <!--    checkout-->
+    <string name="cart_detail">CART DETAIL</string>
+    <string name="clear_all">Clear All</string>
+    <string name="complete_order">COMPLETE ORDER</string>
+    <string name="cart">Cart</string>
 </resources>
