@@ -4,10 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.emart.dao.UserDao
 import com.example.emart.domains.User
+import org.jetbrains.annotations.NotNull
 
-@Database(entities = [User::class], version = 2, exportSchema = false)
+@Database(entities = [User::class], version = 3, exportSchema = false)
 abstract class EliteDatabase : RoomDatabase(){
     abstract fun userDao() : UserDao
 
@@ -25,7 +28,9 @@ abstract class EliteDatabase : RoomDatabase(){
                     context.applicationContext,
                     EliteDatabase::class.java,
                     "Elite_Database"
-                ).build()
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 return instance
             }

@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.emart.domains.User
 import com.example.emart.viewmodels.UserViewModel
 import kotlinx.android.synthetic.main.activity_register.*
+import org.mindrot.jbcrypt.BCrypt
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -40,7 +41,7 @@ class RegisterActivity : AppCompatActivity() {
         val userType = findViewById<RadioButton>(type.checkedRadioButtonId).text.toString()
 
         if(inputCheck(firstname, lastname, email, password, userType)) {
-            val user = User(0, firstname, lastname, email, password, userType)
+            val user = User(0, firstname, lastname, email, BCrypt.hashpw(password, BCrypt.gensalt(12)), userType)
             myUserViewModel.addUser(user)
             val toast: Toast = Toast.makeText(this, "Account Created Successfully", Toast.LENGTH_SHORT)
             toast.show()
