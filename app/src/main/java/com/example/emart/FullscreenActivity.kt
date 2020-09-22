@@ -40,12 +40,12 @@ class FullscreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_fullscreen)
         supportActionBar?.hide()
 
-        ListUserDatasource.save(User("Brook", "Yemerou", "brookyemerou@gmail.com", "brookyemerou"))
-        ListUserDatasource.save(User("Brook", "Yemerou", "byemerou@miu.edu", "Y"))
-        ListUserDatasource.save(User("Jane", "Doe", "JDoe", "janedoe"))
-        ListUserDatasource.save(User("Peter", "Parker", "PParker", "peterparker"))
-        ListUserDatasource.save(User("John", "Doe", "JDoeM", "jdoem"))
-        ListUserDatasource.save(User("John", "Doe", "", ""))
+//        ListUserDatasource.save(User("Brook", "Yemerou", "brookyemerou@gmail.com", "brookyemerou"))
+//        ListUserDatasource.save(User("Brook", "Yemerou", "byemerou@miu.edu", "Y"))
+//        ListUserDatasource.save(User("Jane", "Doe", "JDoe", "janedoe"))
+//        ListUserDatasource.save(User("Peter", "Parker", "PParker", "peterparker"))
+//        ListUserDatasource.save(User("John", "Doe", "JDoeM", "jdoem"))
+//        ListUserDatasource.save(User("John", "Doe", "", ""))
 
         ListDeviceDatasource.save(Device("iPhone 11", 999.0, "Black", R.drawable.phone, "34564", "This pre-owned product is not Apple certified, but has been professionally inspected, tested and " +
                 "cleaned by Amazon-qualified suppliers."))
