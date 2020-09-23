@@ -6,12 +6,15 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.example.emart.dao.ProductDao
 import com.example.emart.dao.UserDao
+import com.example.emart.domains.Product
 import com.example.emart.domains.User
 import org.jetbrains.annotations.NotNull
 
-@Database(entities = [User::class], version = 3, exportSchema = false)
+@Database(entities = [User::class, Product::class], version = 3, exportSchema = false)
 abstract class EliteDatabase : RoomDatabase(){
+    abstract fun productDao() : ProductDao
     abstract fun userDao() : UserDao
 
     companion object {

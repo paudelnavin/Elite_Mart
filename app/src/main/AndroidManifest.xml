@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".CheckoutActivity"></activity>
         <activity android:name=".DeviceDescriptionActivity" />
+        <activity android:name=".SellerActivity"/>
         <activity android:name=".RecycledListActivity" />
         <activity android:name=".RegisterActivity" />
         <activity
