@@ -7,10 +7,8 @@ import androidx.room.RoomDatabase
 import com.example.emart.dao.UserDao
 import com.example.emart.domains.User
 import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.emart.dao.ProductDao
 import com.example.emart.domains.Product
-import org.jetbrains.annotations.NotNull
 
 @Database(entities = [User::class, Product::class], version = 3, exportSchema = false)
 abstract class EliteDatabase : RoomDatabase(){

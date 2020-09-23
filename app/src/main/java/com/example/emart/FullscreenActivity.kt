@@ -2,7 +2,6 @@ package com.example.emart
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.os.AsyncTask
 import android.os.Bundle
 import android.os.Handler
 import android.view.Gravity
@@ -13,9 +12,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import com.example.emart.domains.Device
-import com.example.emart.domains.User
+import com.example.emart.entities.User
 import com.example.emart.repository.ListDeviceDatasource
 import com.example.emart.repository.ListUserDatasource
 import com.example.emart.viewmodels.UserViewModel
@@ -125,6 +123,10 @@ class FullscreenActivity : AppCompatActivity() {
                                 intent.putExtra("username", email)
                                 intent.putExtra("fullname", "${user!!.firstname} ${user!!.lastname}")
                                 startActivity(intent)
+//                                val intent = Intent(this, ShoppingActivity::class.java)
+//                                intent.putExtra("username", email)
+//                                intent.putExtra("fullname", "${user!!.firstname} ${user!!.lastname}")
+//                                startActivity(intent)
                             }
                         }
                     }

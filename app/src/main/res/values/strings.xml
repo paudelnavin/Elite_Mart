@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Walmart</string>
+    <string name="app_name">Elite Mart</string>
     <string name="email_address">Email Address (Required)</string>
     <string name="password_required">Password (Required)</string>
     <string name="sign_in">Sign In</string>
@@ -12,7 +12,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Walmart</string>
+    <string name="menu_home">Elite Mart</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="sign_in_to_your_account">Sign in to your account</string>
@@ -41,4 +41,7 @@
     <string name="complete_order">COMPLETE ORDER</string>
     <string name="cart">Cart</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>

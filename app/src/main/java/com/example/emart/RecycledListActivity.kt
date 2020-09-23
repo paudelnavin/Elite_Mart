@@ -19,7 +19,6 @@ class RecycledListActivity : AppCompatActivity() {
 
         val recyclerView = rview
         recyclerView?.layoutManager = LinearLayoutManager(this)
-//        val devices = ArrayList<Device>()
 
         var adapter = DeviceAdapter(ListDeviceDatasource.findAll())
         recyclerView.adapter = adapter

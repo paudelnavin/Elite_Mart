@@ -1,6 +1,6 @@
 package com.example.emart
 
-import com.example.emart.domains.User
+import com.example.emart.entities.User
 import com.example.emart.repository.ListUserDatasource
 import org.junit.Test
 
