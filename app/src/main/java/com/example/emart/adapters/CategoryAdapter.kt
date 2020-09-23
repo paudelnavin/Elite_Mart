@@ -31,27 +31,27 @@ class CategoryAdapter : BaseAdapter {
         val inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
         val categoryView = inflator.inflate(R.layout.card, p2, false)
-        categoryView.imageButton5.setImageResource(cat.imageString!!)
-        categoryView.beauty.setOnClickListener{
-            popToast(categoryView)
-            if(categoryView.textView8.text == "Electronics") {
-                val intent = Intent(context, RecycledListActivity::class.java)
-                (context as Activity).startActivity(intent)
-            }
-        }
-        categoryView.textView8.text = cat.catName!!
+//        categoryView.card_image.setImageResource(cat.imageString!!)
+//        categoryView.beauty.setOnClickListener{
+//            popToast(categoryView)
+//            if(categoryView.card_name.text == "Electronics") {
+//                val intent = Intent(context, RecycledListActivity::class.java)
+//                (context as Activity).startActivity(intent)
+//            }
+//        }
+//        categoryView.textView8.text = cat.catName!!
         return categoryView
     }
 
 
     private fun popToast(categoryView : View) {
-        val toast: Toast = Toast.makeText(
-            context,
-            "${categoryView.textView8.text} Category Selected",
-            Toast.LENGTH_LONG
-        )
-        toast.setGravity(Gravity.BOTTOM, 0, 0)
-        toast.show()
+//        val toast: Toast = Toast.makeText(
+//            context,
+//            "${categoryView.textView8.text} Category Selected",
+//            Toast.LENGTH_LONG
+//        )
+//        toast.setGravity(Gravity.BOTTOM, 0, 0)
+//        toast.show()
     }
 
     override fun getCount(): Int {

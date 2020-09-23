@@ -1,4 +1,4 @@
-package com.example.emart.domains
+package com.example.emart.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

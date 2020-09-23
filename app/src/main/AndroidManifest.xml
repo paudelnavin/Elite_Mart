@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CheckoutActivity"></activity>
-        <activity android:name=".DeviceDescriptionActivity" />
-        <activity android:name=".RecycledListActivity" />
-        <activity android:name=".RegisterActivity" />
         <activity
             android:name=".ShoppingActivity"
             android:label="@string/title_activity_shopping"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".CheckoutActivity" />
+        <activity android:name=".DeviceDescriptionActivity" />
+        <activity android:name=".RecycledListActivity" />
+        <activity android:name=".RegisterActivity" />
         <activity
             android:name=".FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

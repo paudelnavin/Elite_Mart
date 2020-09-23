@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.emart.domains.User
+import com.example.emart.entities.User
 import com.example.emart.viewmodels.UserViewModel
 import kotlinx.android.synthetic.main.activity_register.*
 import org.mindrot.jbcrypt.BCrypt

@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.emart.dao.UserDao
 import com.example.emart.database.EliteDatabase
 
-import com.example.emart.domains.User
+import com.example.emart.entities.User
 import com.example.emart.repository.UserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

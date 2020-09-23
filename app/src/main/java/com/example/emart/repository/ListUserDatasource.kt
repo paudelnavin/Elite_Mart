@@ -1,6 +1,6 @@
 package com.example.emart.repository
 
-import com.example.emart.domains.User
+import com.example.emart.entities.User
 import java.lang.Exception
 
 object ListUserDatasource : UserDatasource {
