@@ -10,6 +10,8 @@ interface UserDao {
     suspend fun addUser(user : User)
     @Query("SELECT * FROM USER ORDER BY UID ASC")
     fun getAllUser() : LiveData<List<User>>
+    @Query("SELECT * FROM USER WHERE :username")
+    fun getUser(username : String) : User
     @Insert
     suspend fun addMultipleUsers(vararg user : User)
     @Update

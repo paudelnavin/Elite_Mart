@@ -14,7 +14,7 @@ import org.mindrot.jbcrypt.BCrypt
 
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var myUserViewModel : UserViewModel
+    private lateinit var myUserViewModel: UserViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,10 +40,18 @@ class RegisterActivity : AppCompatActivity() {
         val password = password.text.toString()
         val userType = findViewById<RadioButton>(type.checkedRadioButtonId).text.toString()
 
-        if(inputCheck(firstname, lastname, email, password, userType)) {
-            val user = User(0, firstname, lastname, email, BCrypt.hashpw(password, BCrypt.gensalt(12)), userType)
+        if (inputCheck(firstname, lastname, email, password, userType)) {
+            val user = User(
+                0,
+                firstname,
+                lastname,
+                email,
+                BCrypt.hashpw(password, BCrypt.gensalt(12)),
+                userType
+            )
             myUserViewModel.addUser(user)
-            val toast: Toast = Toast.makeText(this, "Account Created Successfully", Toast.LENGTH_SHORT)
+            val toast: Toast =
+                Toast.makeText(this, "Account Created Successfully", Toast.LENGTH_SHORT)
             toast.show()
             finish()
         } else {
@@ -52,7 +60,17 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    fun inputCheck(firstname : String, lastname : String, username : String, password : String, userType: String) : Boolean {
-        return !(TextUtils.isEmpty(firstname) && TextUtils.isEmpty(lastname) && TextUtils.isEmpty(username) && TextUtils.isEmpty(password) && TextUtils.isEmpty(userType))
-    }
+    private fun inputCheck(
+        firstname: String,
+        lastname: String,
+        username: String,
+        password: String,
+        userType: String
+    ): Boolean =
+        !(TextUtils.isEmpty(firstname) &&
+                TextUtils.isEmpty(lastname) &&
+                TextUtils.isEmpty(username) &&
+                TextUtils.isEmpty(password) &&
+                TextUtils.isEmpty(userType))
+
 }

@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.example.emart.dao.UserDao
 import com.example.emart.database.EliteDatabase
 
 import com.example.emart.domains.User
@@ -13,18 +14,28 @@ import kotlinx.coroutines.launch
 
 class UserViewModel(application: Application) :AndroidViewModel(application) {
 
-    private val getAllUsers : LiveData<List<User>>
-    private val respository : UserRepository
+    val getAllUsers : LiveData<List<User>>
+    val repository : UserRepository
+    lateinit var user : User
+    var userDao : UserDao = EliteDatabase.getDatabase(application).userDao()
 
     init {
-        val userDao = EliteDatabase.getDatabase(application).userDao()
-        respository = UserRepository(userDao)
-        getAllUsers = respository.readAllData
+        repository = UserRepository(userDao)
+        getAllUsers = repository.readAllData
+//        user = repository.getUser("byemerou@miu.edu")
     }
 
     fun addUser(user : User) {
         viewModelScope.launch(Dispatchers.IO) {
-            respository.addUser(user)
+            repository.addUser(user)
         }
     }
+
+    fun getUser(username : String) {
+//        viewModelScope.launch(Dispatchers.IO) {
+//            user = repository.getUser(username)
+//        }
+        userDao.getUser(username)
+    }
+
 }
