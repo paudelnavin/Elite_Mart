@@ -5,4 +5,7 @@
     <color name="colorAccent">#0288D1</color>
 
     <color name="black_overlay">#66000000</color>
+
+<!--    checkout-->
+    <color name="colorBackground">#F1F4F7</color>
 </resources>
