@@ -17,11 +17,7 @@
         <activity
             android:name=".ShoppingActivity"
             android:label="@string/title_activity_shopping"
-<<<<<<< HEAD
             android:theme="@style/AppTheme.NoActionBar" />
-=======
-            android:theme="@style/AppTheme.NoActionBar"/>
->>>>>>> 843ee4f... Merge Conflicts
         <activity
             android:name=".FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
