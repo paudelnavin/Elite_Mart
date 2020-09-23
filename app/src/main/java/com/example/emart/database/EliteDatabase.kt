@@ -8,8 +8,16 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.emart.dao.ProductDao
 import com.example.emart.dao.UserDao
+<<<<<<< HEAD
 import com.example.emart.domains.Product
 import com.example.emart.domains.User
+=======
+import com.example.emart.entities.User
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
+import com.example.emart.dao.ProductDao
+import com.example.emart.domains.Product
+>>>>>>> 843ee4f... Merge Conflicts
 import org.jetbrains.annotations.NotNull
 
 @Database(entities = [User::class, Product::class], version = 3, exportSchema = false)
