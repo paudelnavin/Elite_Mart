@@ -2,7 +2,7 @@ package com.example.emart.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.emart.domains.Product
+import com.example.emart.entities.Product
 
 @Dao
 interface ProductDao {

@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.emart.dao.ProductDao
 import com.example.emart.database.EliteDatabase
-import com.example.emart.domains.Product
+import com.example.emart.entities.Product
 
 import com.example.emart.repository.ProductRepository
 import kotlinx.coroutines.Dispatchers

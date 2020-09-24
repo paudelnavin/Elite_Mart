@@ -4,14 +4,10 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.RadioButton
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.emart.domains.Product
+import com.example.emart.entities.Product
 import com.example.emart.viewmodels.ProductViewModel
-import com.example.emart.viewmodels.UserViewModel
 import kotlinx.android.synthetic.main.activity_product.*
 
 class ProductActivity : AppCompatActivity() {
@@ -67,11 +63,13 @@ class ProductActivity : AppCompatActivity() {
                     rating = prodRating,
                     desc = prodDesc,
                     catagory = prodCategory,
-                    quantity = prodQuantity
+                    quantity = prodQuantity,
+                    image = "@drawable/electronics"
                 )
             )
         }
     }
+
 
 }
 

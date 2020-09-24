@@ -51,4 +51,80 @@
 
     <string name="back_to_home">BACK</string>
     <string name="add_to_cart">ADD TO CART</string>
+    <string-array name="food_images">
+        <item>@drawable/food</item>
+        <item>@drawable/food1</item>
+        <item>@drawable/food2</item>
+        <item>@drawable/food3</item>
+        <item>@drawable/food4</item>
+        <item>@drawable/food5</item>
+        <item>@drawable/food6</item>
+        <item>@drawable/food7</item>
+        <item>@drawable/food8</item>
+        <item>@drawable/food9</item>
+        <item>@drawable/food10</item>
+        <item>@drawable/food11</item>
+        <item>@drawable/food12</item>
+        <item>@drawable/food13</item>
+        <item>@drawable/food14</item>
+        <item>@drawable/food15</item>
+        <item>@drawable/food16</item>
+        <item>@drawable/food17</item>
+        <item>@drawable/food18</item>
+        <item>@drawable/food19</item>
+    </string-array>
+    <string-array name="elec_images">
+        <item>@drawable/electronics</item>
+        <item>@drawable/electronics1</item>
+        <item>@drawable/electronics3</item>
+        <item>@drawable/electronics4</item>
+        <item>@drawable/electronics5</item>
+        <item>@drawable/electronics6</item>
+        <item>@drawable/electronics8</item>
+        <item>@drawable/electronics10</item>
+        <item>@drawable/electronics11</item>
+        <item>@drawable/electronics12</item>
+        <item>@drawable/electronics13</item>
+        <item>@drawable/electronics15</item>
+        <item>@drawable/electronics16</item>
+        <item>@drawable/electronics17</item>
+        <item>@drawable/electronics18</item>
+        <item>@drawable/electronics19</item>
+    </string-array>
+
+    <string-array name="clothings">
+        <item>@drawable/clothing</item>
+        <item>@drawable/clothing1</item>
+        <item>@drawable/clothing2</item>
+        <item>@drawable/clothing3</item>
+        <item>@drawable/clothing4</item>
+        <item>@drawable/clothing5</item>
+        <item>@drawable/clothing6</item>
+        <item>@drawable/clothing7</item>
+        <item>@drawable/clothing8</item>
+        <item>@drawable/clothing9</item>
+        <item>@drawable/clothing10</item>
+        <item>@drawable/clothing11</item>
+        <item>@drawable/clothing12</item>
+        <item>@drawable/clothing13</item>
+    </string-array>
+
+    <string-array name="beauty_images">
+        <item>@drawable/beauty</item>
+        <item>@drawable/beauty1</item>
+        <item>@drawable/beauty2</item>
+        <item>@drawable/beauty3</item>
+        <item>@drawable/beauty4</item>
+        <item>@drawable/beauty5</item>
+        <item>@drawable/beauty6</item>
+        <item>@drawable/beauty7</item>
+        <item>@drawable/beauty8</item>
+        <item>@drawable/beauty9</item>
+        <item>@drawable/beauty11</item>
+        <item>@drawable/beauty12</item>
+        <item>@drawable/beauty13</item>
+        <item>@drawable/beauty14</item>
+    </string-array>
+
+
 </resources>

@@ -2,7 +2,7 @@ package com.example.emart.repository
 
 import androidx.lifecycle.LiveData
 import com.example.emart.dao.ProductDao
-import com.example.emart.domains.Product
+import com.example.emart.entities.Product
 
 class ProductRepository(private val productDao: ProductDao ) {
     val readAllData : LiveData<List<Product>> = productDao.getAllProducts()

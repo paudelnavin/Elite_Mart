@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.emart.R
-import com.example.emart.domains.Product
+import com.example.emart.entities.Product
 import kotlinx.android.synthetic.main.items_products.view.*
 
 

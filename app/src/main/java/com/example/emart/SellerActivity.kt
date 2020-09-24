@@ -1,18 +1,11 @@
 package com.example.emart
 
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils
-import android.view.LayoutInflater
 import android.view.View
-import android.widget.*
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
 import com.example.emart.adapters.SellerFragmentsAdapter
-import com.example.emart.domains.Product
 import com.example.emart.ui.seller.OrderFragment
 import com.example.emart.ui.seller.ProductFragment
 import com.example.emart.ui.seller.ShippingFragment
@@ -20,11 +13,6 @@ import com.example.emart.viewmodels.ProductViewModel
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_seller.*
 import kotlinx.android.synthetic.main.activity_seller.tabs
-import kotlinx.android.synthetic.main.activity_shopping.*
-import kotlinx.android.synthetic.main.fragment_product.*
-import kotlinx.android.synthetic.main.new_product_layout.*
-import kotlinx.android.synthetic.main.new_product_layout.view.*
-import kotlinx.coroutines.NonCancellable.cancel
 
 class SellerActivity : AppCompatActivity() {
 //    lateinit var prod : Product

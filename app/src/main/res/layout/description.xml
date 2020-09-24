@@ -18,6 +18,7 @@
                 android:src="@drawable/phone"
                 android:scaleType="centerCrop"
                 app:rippleColor="#777777"
+
                 app:strokeColor="#9C9C9C" />
 
             <LinearLayout

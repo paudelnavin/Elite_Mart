@@ -4,19 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.TextView
 import androidx.annotation.Nullable
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.emart.R
 import com.example.emart.adapters.SellerProductAdapter
-import com.example.emart.domains.Product
+import com.example.emart.entities.Product
 import kotlinx.android.synthetic.main.fragment_product.view.*
-import kotlinx.android.synthetic.main.new_product_layout.*
 
 
 class ProductFragment : Fragment() {
@@ -31,7 +26,7 @@ class ProductFragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        listProducts = arrayListOf(Product(0, "Name", 2, 23, "Clothing", 1,2,"GOOD"))
+        listProducts = arrayListOf(Product(0, "Name", "2", 23, "Clothing", 1,2,"GOOD"))
         var inflate = inflater.inflate(R.layout.fragment_product, container, false)
         inflate.products_recyclerView.layoutManager = LinearLayoutManager(context)
         val recyclerAdapter = SellerProductAdapter(requireContext(), listProducts)
