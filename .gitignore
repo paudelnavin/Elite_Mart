@@ -14,3 +14,4 @@
 .cxx
 .idea
 app/src/test/java/databases
+app/src/test/java/com/example/emart/database

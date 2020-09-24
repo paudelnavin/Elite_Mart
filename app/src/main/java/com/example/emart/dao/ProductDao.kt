@@ -18,4 +18,6 @@ interface ProductDao {
     suspend fun updateProduct(prod: Product)
     @Delete
     suspend fun deleteProduct(prod: Product)
+    @Query("DELETE FROM PRODUCT")
+    suspend fun dropProduct()
 }

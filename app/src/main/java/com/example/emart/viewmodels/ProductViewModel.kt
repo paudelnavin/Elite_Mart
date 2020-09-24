@@ -31,6 +31,12 @@ class ProductViewModel(application: Application) :AndroidViewModel(application) 
         }
     }
 
+    fun dropDatabase(){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.dropDatabase()
+        }
+    }
+
 
 
 }

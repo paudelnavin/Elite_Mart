@@ -1,8 +1,11 @@
 package com.example.emart.repository
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.viewModelScope
 import com.example.emart.dao.ProductDao
 import com.example.emart.entities.Product
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class ProductRepository(private val productDao: ProductDao ) {
     val readAllData : LiveData<List<Product>> = productDao.getAllProducts()
@@ -15,5 +18,7 @@ class ProductRepository(private val productDao: ProductDao ) {
         return productDao.getProduct(productId)
     }
 
-
+    suspend fun dropDatabase(){
+          productDao.dropProduct()
+        }
 }

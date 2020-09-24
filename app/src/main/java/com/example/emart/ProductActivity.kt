@@ -1,9 +1,11 @@
 package com.example.emart
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.RadioButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.emart.entities.Product
@@ -69,6 +71,11 @@ class ProductActivity : AppCompatActivity() {
             )
         }
     }
+
+//    fun addNewProduct(view: View) = startActivity(Intent(this, ProductActivity::class.java))
+//    fun clearDialog(view: View) = finish()
+
+
 
 
 }
