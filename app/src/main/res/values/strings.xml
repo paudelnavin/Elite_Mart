@@ -45,4 +45,7 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="cash">$25</string>
+
+    <string name="back_to_home">BACK</string>
+    <string name="add_to_cart">ADD TO CART</string>
 </resources>
