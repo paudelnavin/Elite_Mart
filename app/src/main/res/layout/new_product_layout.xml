@@ -1,21 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_margin="20dp"
         android:orientation="vertical">
 
+        <EditText
+            android:id="@+id/ownerId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:ignore="LabelFor"
+            android:inputType="text"
+            android:autofillHints="" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/pname"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:ems="10"
+            tools:ignore="LabelFor"
+            android:inputType="textPersonName|textAutoComplete"
+            android:hint="Product Name"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:hint="Product Price" />
+
+        <EditText
+            android:id="@+id/rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Rating" />
+
+        <EditText
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="none"
+            android:ems="10"
+            android:hint="Description"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:maxLines="5"
+            android:scrollHorizontally="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Quantity" />
+
+        <RadioGroup
+            android:id="@+id/group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <RadioButton
+                        android:id="@+id/Electronics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:text="Electronics" />
+
+                    <RadioButton
+                        android:id="@+id/Clothings"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Clothings" />
+                </TableRow>
+
+                <TableRow>
+
+                    <RadioButton
+                        android:id="@+id/Beauty"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:text="Beauty" />
+
+                    <RadioButton
+                        android:id="@+id/Food"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="Food" />
+                </TableRow>
+            </TableLayout>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:onClick="createUser"
+                android:text="ADD"
+                app:backgroundTint="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CANCEL"
+                android:onClick="clearDialog"
+                app:backgroundTint="#FF0000" />
+        </LinearLayout>
+
+
     </LinearLayout>
 </ScrollView>

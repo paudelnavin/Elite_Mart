@@ -3,6 +3,9 @@ package com.example.emart.domains
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.emart.R
+import com.example.emart.entities.User
+import kotlinx.android.synthetic.main.new_product_layout.view.*
 
 @Entity
 class Product (
@@ -12,11 +15,13 @@ class Product (
         @ColumnInfo(name = "PNAME")
         val productName:String,
         @ColumnInfo(name = "IMAGE")
-        val image:Int,
+        val image:Int = R.id.Clothings,
         @ColumnInfo(name = "PRICE")
         val price:Int,
         @ColumnInfo(name = "CATEGORY")
-        val catagory:Int,
+        val catagory:String,
+        @ColumnInfo(name = "RATING")
+        val rating:Int,
         @ColumnInfo(name = "QUANTITY")
         var quantity:Int,
         @ColumnInfo(name = "DESC")

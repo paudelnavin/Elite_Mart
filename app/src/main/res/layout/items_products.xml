@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
@@ -22,7 +23,8 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginEnd="8dp"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@mipmap/ic_launcher_round"
+            tools:ignore="RtlCompat" />
 
         <TextView
             android:id="@+id/name_product"
@@ -30,7 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/img_products"
             android:text="Product Name"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
 
         <TextView
             android:id="@+id/id_product"
@@ -38,7 +41,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/name_product"
             android:layout_toEndOf="@+id/img_products"
-            android:text="product Id" />
+            android:text="product Id"
+            tools:ignore="RtlCompat" />
 
         <TextView
             android:id="@+id/price_product"
@@ -46,7 +50,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/id_product"
             android:layout_toEndOf="@+id/img_products"
-            android:text="$" />
+            android:text="$"
+            tools:ignore="RtlCompat" />
 
         <TextView
             android:id="@+id/color_product"
@@ -54,7 +59,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/price_product"
             android:layout_toEndOf="@+id/img_products"
-            android:text="Product Color:" />
+            android:text="Product Color:"
+            tools:ignore="RtlCompat" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -81,20 +87,21 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true">
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <Button
                     android:id="@+id/remove_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:onClick="removeItem"
                     android:src="@drawable/minus_button"
-                    android:backgroundTint="#FFFFFF"/>
+                    android:backgroundTint="#FFFFFF"
+                    tools:ignore="VectorDrawableCompat" />
 
                 <Space
                     android:layout_width="15dp"
                     android:layout_height="5dp" />
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <Button
                     android:id="@+id/add_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -102,7 +109,7 @@
                     android:onClick="addItem"
                     android:src="@drawable/add_button"
                     android:backgroundTint="#FFFFFF"
-                    />
+                    tools:ignore="VectorDrawableCompat" />
 
             </LinearLayout>
 

@@ -12,7 +12,7 @@ import com.example.emart.repository.ProductRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class ProductsViewModel(application: Application) :AndroidViewModel(application) {
+class ProductViewModel(application: Application) :AndroidViewModel(application) {
 
     val getAllProduct: LiveData<List<Product>>
     val repository: ProductRepository
