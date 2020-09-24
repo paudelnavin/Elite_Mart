@@ -1,14 +1,18 @@
 package com.example.emart
 
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
 import com.example.emart.domains.Device
 import com.example.emart.repository.ListDeviceDatasource
 import kotlinx.android.synthetic.main.activity_device_description.*
 import kotlinx.android.synthetic.main.description.view.*
 
 class DeviceDescriptionActivity : AppCompatActivity() {
+
+    var btn1: ElegantNumberButton? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +28,9 @@ class DeviceDescriptionActivity : AppCompatActivity() {
         descriptionView!!.deviceDesc.text = currentDevice!!.desc
         descriptionView!!.deviceColor.text = currentDevice!!.color
         descBackground!!.addView(descriptionView)
+
+        btn1 = findViewById(R.id.number_button)
+        btn1!!.setRange(1, 100)
 
     }
 
