@@ -10,7 +10,7 @@ import com.example.emart.dao.ProductDao
 import com.example.emart.domains.Product
 import com.example.emart.entities.User
 
-@Database(entities = [User::class, Product::class], version = 4, exportSchema = false)
+@Database(entities = [User::class, Product::class], version = 7, exportSchema = false)
 abstract class EliteDatabase : RoomDatabase(){
     abstract fun productDao() : ProductDao
     abstract fun userDao() : UserDao

@@ -1,19 +1,35 @@
 package com.example.emart
 
 
+import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModel
 import com.example.emart.adapters.SellerFragmentsAdapter
+import com.example.emart.domains.Product
 import com.example.emart.ui.seller.OrderFragment
 import com.example.emart.ui.seller.ProductFragment
 import com.example.emart.ui.seller.ShippingFragment
+import com.example.emart.viewmodels.ProductViewModel
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_seller.*
+import kotlinx.android.synthetic.main.activity_seller.tabs
+import kotlinx.android.synthetic.main.activity_shopping.*
+import kotlinx.android.synthetic.main.fragment_product.*
+import kotlinx.android.synthetic.main.new_product_layout.*
+import kotlinx.android.synthetic.main.new_product_layout.view.*
+import kotlinx.coroutines.NonCancellable.cancel
 
 class SellerActivity : AppCompatActivity() {
 //    lateinit var prod : Product
+
+    private lateinit var pViewModel: ProductViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +44,7 @@ class SellerActivity : AppCompatActivity() {
         tabs.getTabAt(0)!!.setIcon(R.drawable.products)
         tabs.getTabAt(1)!!.setIcon(R.drawable.orders)
         tabs.getTabAt(2)!!.setIcon(R.drawable.shipping)
+
 
 
 //        prod = Product(12, "laptop", "red", 100.0, R.drawable.orders,3)
@@ -59,7 +76,7 @@ class SellerActivity : AppCompatActivity() {
 //
 //    }
 
-    fun addItem(view: View){
+    fun addItem(view: View) {
 
 //        prod.productQuantity++
 
@@ -70,17 +87,18 @@ class SellerActivity : AppCompatActivity() {
         tab1!!.select()
     }
 
-    fun removeItem(view: View){
+    fun removeItem(view: View) {
 //        if (prod.productQuantity>0){
 //            prod.productQuantity--
 //        }
     }
 
-    fun addNewProduct(view: View) {
-        var builder = AlertDialog.Builder(applicationContext)
 
-        builder.setTitle("Add Product")
-//        builder.setView()
-//        var dialog =
-    }
+
+    fun addNewProduct(view: View) = startActivity(Intent(this, ProductActivity::class.java))
+
+    fun clearDialog(view: View) = finish()
+
+
+
 }

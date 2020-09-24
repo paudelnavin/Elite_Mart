@@ -5,14 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.seller.ProductFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <!--    <TextView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        android:text="Products Page"-->
-    <!--        android:textSize="18sp"-->
-    <!--        android:gravity="center" />-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/products_recyclerView"
         android:layout_width="match_parent"
@@ -22,13 +14,11 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-       android:onClick="addNewProduct"
-        android:gravity="right"
-        android:layout_margin="16dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:background="@color/colorAccent"
+        android:onClick="addNewProduct"
+        android:gravity="right"
         app:srcCompat="@drawable/add_button" />
 
 </FrameLayout>

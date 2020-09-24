@@ -53,4 +53,8 @@
         <item name="colorControlActivated">#FBC02D</item>
         rating
     </style>
+
+    <style name="pbutton"></style>
+
+    <style name="nbutton"></style>
 </resources>
