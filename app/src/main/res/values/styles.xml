@@ -47,4 +47,10 @@
     <style name="AppTheme.RoundedCornerMaterialButton" parent="Widget.MaterialComponents.Button.Icon">
         <item name="android:background">@drawable/rounded_button</item>
     </style>
+
+    <style name="rating" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#6A6A6A</item>
+        <item name="colorControlActivated">#FBC02D</item>
+        rating
+    </style>
 </resources>

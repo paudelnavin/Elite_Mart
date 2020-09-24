@@ -22,7 +22,7 @@ class SellerProductAdapter(private val mContext: Context, private val mData: Lis
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = mData[position]
-        holder.imgView.setImageResource(currentItem.image)
+//        holder.imgView.setImageResource(currentItem.image)
         holder.textView.text = "Quantity: " + currentItem.quantity.toString()
         holder.textView1.text = "Item: " + currentItem.productName
         holder.textView4.text = "$" + currentItem.price.toString()

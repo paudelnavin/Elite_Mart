@@ -26,6 +26,7 @@ class ProductFragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        listProducts = arrayListOf(Product(0, "Name", 2, 23, 2, 1,"gOOD"))
         var inflate = inflater.inflate(R.layout.fragment_product, container, false)
         inflate.products_recyclerView.layoutManager = LinearLayoutManager(context)
         val recyclerAdapter = SellerProductAdapter(requireContext(), listProducts)

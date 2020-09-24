@@ -117,16 +117,14 @@ class FullscreenActivity : AppCompatActivity() {
                                 intent.putExtra("username", email)
                                 intent.putExtra("fullname", "${user!!.firstname} ${user!!.lastname}")
                                 startActivity(intent)
+                                Toast.makeText(applicationContext, "Login Successful!", Toast.LENGTH_LONG)
                             }
                             "SELLER" -> {
-                                val intent = Intent(this, ShoppingActivity::class.java)
+                                val intent = Intent(this, SellerActivity::class.java)
                                 intent.putExtra("username", email)
                                 intent.putExtra("fullname", "${user!!.firstname} ${user!!.lastname}")
                                 startActivity(intent)
-//                                val intent = Intent(this, ShoppingActivity::class.java)
-//                                intent.putExtra("username", email)
-//                                intent.putExtra("fullname", "${user!!.firstname} ${user!!.lastname}")
-//                                startActivity(intent)
+                                Toast.makeText(applicationContext, "Sign Up Successful!", Toast.LENGTH_LONG)
                             }
                         }
                     }

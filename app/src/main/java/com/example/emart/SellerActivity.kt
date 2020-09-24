@@ -11,7 +11,6 @@ import com.example.emart.ui.seller.ProductFragment
 import com.example.emart.ui.seller.ShippingFragment
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_seller.*
-import kotlinx.android.synthetic.main.app_bar_main.toolbar
 
 class SellerActivity : AppCompatActivity() {
 //    lateinit var prod : Product
@@ -19,7 +18,7 @@ class SellerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seller)
-        setSupportActionBar(toolbar)
+//        setSupportActionBar(toolbar)
         val adapter = SellerFragmentsAdapter(supportFragmentManager)
         adapter.addFragment(ProductFragment(), "Products")
         adapter.addFragment(OrderFragment(), "Orders")
