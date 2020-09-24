@@ -48,4 +48,7 @@
     <string name="addProdct">ADD</string>
     <string name="cancel">CANCEL</string>
     <string name="title_activity_product">ProductActivity</string>
+
+    <string name="back_to_home">BACK</string>
+    <string name="add_to_cart">ADD TO CART</string>
 </resources>
