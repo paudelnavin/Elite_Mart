@@ -10,8 +10,8 @@ import kotlinx.coroutines.launch
 class ProductRepository(private val productDao: ProductDao ) {
     val readAllData : LiveData<List<Product>> = productDao.getAllProducts()
 
-    suspend fun addProduct(prod: Product) {
-        productDao.addProduct(prod)
+    suspend fun createNewProduct(prod: Product) {
+        productDao.createNewProduct(prod)
     }
 
     fun getProduct(productId: Int) : Product {

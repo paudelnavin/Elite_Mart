@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.seller.ProductFragment">
+    android:background="#FFFFFF"
+    tools:context="com.example.emart.ui.seller.ProductFragment">
+
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/products_recyclerView"
+        android:id="@+id/seller_recycle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="5pt"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -20,10 +26,5 @@
         android:onClick="addNewProduct"
         android:gravity="right"
         app:srcCompat="@drawable/add_button" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </RelativeLayout>
 
 </FrameLayout>

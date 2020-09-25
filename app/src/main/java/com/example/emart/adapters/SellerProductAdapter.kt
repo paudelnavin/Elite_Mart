@@ -35,11 +35,11 @@ class SellerProductAdapter(private val mContext: Context, private val mData: Lis
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val imgView: ImageView = itemView.img_products
-        val textView:TextView=itemView.quantity_product
+        val textView:TextView=itemView.product_quantity
         val textView1: TextView = itemView.name_product
-        val textView2: TextView = itemView.id_product
-        val textView3: TextView = itemView.color_product
-        var textView4: TextView = itemView.price_product
+        val textView2: TextView = itemView.product_price
+        val textView3: TextView = itemView.product_rating
+        var textView4: TextView = itemView.product_category
 
 
     }

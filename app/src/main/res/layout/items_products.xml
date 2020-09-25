@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
+    android:id="@+id/retailer_layout"
     android:layout_marginLeft="16dp"
     android:layout_marginTop="12dp"
     android:layout_marginRight="16dp"
@@ -13,6 +14,7 @@
     app:contentPadding="10dp">
 
     <RelativeLayout
+        android:id="@+id/sellerProductView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="8dp">
@@ -20,8 +22,8 @@
         <ImageView
 
             android:id="@+id/img_products"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="89dp"
+            android:layout_height="98dp"
             android:layout_marginEnd="8dp"
             android:src="@mipmap/ic_launcher_round"
             tools:ignore="RtlCompat" />
@@ -36,83 +38,58 @@
             tools:ignore="RtlCompat" />
 
         <TextView
-            android:id="@+id/id_product"
+            android:id="@+id/product_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/name_product"
             android:layout_toEndOf="@+id/img_products"
-            android:text="product Id"
+            android:text="Price($):"
             tools:ignore="RtlCompat" />
 
         <TextView
-            android:id="@+id/price_product"
+            android:id="@+id/product_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/id_product"
+            android:layout_below="@+id/product_price"
             android:layout_toEndOf="@+id/img_products"
-            android:text="$"
+            android:text="Category:"
             tools:ignore="RtlCompat" />
 
         <TextView
-            android:id="@+id/color_product"
+            android:id="@+id/product_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/price_product"
+            android:layout_below="@+id/product_quantity"
             android:layout_toEndOf="@+id/img_products"
-            android:text="Product Color:"
+            android:text="Rating:"
             tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/product_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_below="@+id/product_category"
+            android:layout_toEndOf="@+id/img_products"
+            android:layout_marginRight="80dp"
+            android:text="Quantity:"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/img_products" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="end"
-            android:orientation="vertical">
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/name_product"
+            android:layout_toRightOf="@+id/name_product">
 
             <TextView
-                android:id="@+id/quantity_product"
-                android:layout_width="wrap_content"
+                android:id="@+id/product_desc"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:textStyle="bold"
-                android:text="1"
-                android:layout_marginRight="80dp"/>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="40dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true">
-
-                <Button
-                    android:id="@+id/remove_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:onClick="removeItem"
-                    android:src="@drawable/minus_button"
-                    android:backgroundTint="#FFFFFF"
-                    tools:ignore="VectorDrawableCompat" />
-
-                <Space
-                    android:layout_width="15dp"
-                    android:layout_height="5dp" />
-
-                <Button
-                    android:id="@+id/add_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:onClick="addItem"
-                    android:src="@drawable/add_button"
-                    android:backgroundTint="#FFFFFF"
-                    tools:ignore="VectorDrawableCompat" />
-
-            </LinearLayout>
-
+                android:text="Description:" />
         </LinearLayout>
 
     </RelativeLayout>

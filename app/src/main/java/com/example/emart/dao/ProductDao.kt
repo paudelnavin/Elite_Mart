@@ -7,7 +7,7 @@ import com.example.emart.entities.Product
 @Dao
 interface ProductDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun addProduct(prod : Product)
+    suspend fun createNewProduct(prod : Product)
     @Query("SELECT * FROM PRODUCT ORDER BY PID ASC")
     fun getAllProducts() : LiveData<List<Product>>
     @Query("SELECT * FROM PRODUCT WHERE :productId")

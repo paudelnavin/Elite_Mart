@@ -25,9 +25,9 @@ class ProductViewModel(application: Application) :AndroidViewModel(application) 
         getAllProduct = repository.readAllData
     }
 
-    fun addProduct(prod: Product) {
+    fun createNewProduct(prod: Product) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.addProduct(prod)
+            repository.createNewProduct(prod)
         }
     }
 

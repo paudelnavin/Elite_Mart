@@ -80,12 +80,6 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TableRow>
-
                     <RadioButton
                         android:id="@+id/Electronics"
                         android:layout_width="0dp"
@@ -99,9 +93,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Clothings" />
-                </TableRow>
-
-                <TableRow>
 
                     <RadioButton
                         android:id="@+id/Beauty"
@@ -116,8 +107,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
                         android:text="Food" />
-                </TableRow>
-            </TableLayout>
 
         </RadioGroup>
 
@@ -132,7 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
-                android:onClick="createUser"
+                android:onClick="createNewProduct"
                 android:text="ADD"
                 app:backgroundTint="@color/colorAccent" />
 
